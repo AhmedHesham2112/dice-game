@@ -113,7 +113,7 @@ function DiceGame({
     <div className="dice-game">
       <img
         src={diceImages[dice - 1]}
-        alt="dice"
+        alt={`dice ${dice}`}
         onClick={handleSetDice}
       />
       <h2>
