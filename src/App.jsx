@@ -1,5 +1,13 @@
 import { useState } from "react";
 import "./App.css";
+import dice1 from "./images/dice_1.png";
+import dice2 from "./images/dice_2.png";
+import dice3 from "./images/dice_3.png";
+import dice4 from "./images/dice_4.png";
+import dice5 from "./images/dice_5.png";
+import dice6 from "./images/dice_6.png";
+
+const diceImages = [dice1, dice2, dice3, dice4, dice5, dice6];
 
 export default function App() {
   const [showRules, setShowRules] = useState(false);
@@ -104,7 +112,7 @@ function DiceGame({
   return (
     <div className="dice-game">
       <img
-        src={`/images/dice_${dice}.png`}
+        src={diceImages[dice - 1]}
         alt="dice"
         onClick={handleSetDice}
       />
